@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch Posts</title>
+</head>
+<body>
+
+  <div id="second"></div>
+
+  <script>
+    const target = document.getElementById("second");
+
+    fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+      data.them(val=>val.json()).then(val2=>
+        val2.forEach(element => {
+            const tempDiv = document.createElement("div");
+            const temph4 =document.createElement("h4");
+            const tempP = document.createElement("p");
+            temph4.textContent = element.title;
+            tempP.textContent = element.body;
+            tempDiv.appendChild(temph4);
+            tempDiv.appendChild(tempP);
+            target.appendChild(tempDiv);
+        })
+      )
+      
